@@ -180,6 +180,14 @@ int ownstrtol(const char * str, int * res)
     return result;
 }
 
+char* strlower(char* orig){
+    while (*orig){
+        *orig = tolower(*orig);
+        orig++;
+    }
+    return orig;
+}
+
 int strncasecmp(const char *s1, const char *s2, size_t n)
 {
 	const unsigned char *p1 = (const unsigned char *) s1;
