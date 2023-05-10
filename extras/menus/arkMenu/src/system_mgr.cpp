@@ -163,7 +163,7 @@ static void dateTime() {
 
 	char dateStr[100];
 	sprintf(dateStr, "%04d/%02d/%02d %02d:%02d:%02d", date.year, date.month, date.day, date.hour, date.minutes, date.seconds);
-    common::printText(300, 13, dateStr, LITEGRAY, SIZE_MEDIUM, 0, 0);
+    common::printText(250, 13, dateStr, LITEGRAY, SIZE_MEDIUM, 0, 0);
 }
 
 static void drawBattery(){
@@ -187,7 +187,7 @@ static void drawBattery(){
             else
                 color = RED;
         }
-
+        common::printText(405, 13, percent, LITEGRAY, SIZE_MEDIUM, 0, 0);
         ya2d_draw_rect(455, 6, 20, 8, color, 0);
         ya2d_draw_rect(454, 8, 1, 5, color, 1);
         ya2d_draw_pixel(475, 14, color);
